@@ -97,6 +97,7 @@ export default function Home() {
           bottom: 20,
           left: 0,
           width: '100%',
+          background:'white',
           zIndex: 100,
         }}
       >
