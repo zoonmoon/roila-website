@@ -64,7 +64,7 @@ export default function Home() {
               Year Make Model Search Integration
             </Typography>
             <Typography variant="body2" color="text.secondary" mb={2}>
-              Lightning-fast YMM search to boost conversions and reduce returns caused by fitment mismatches.
+              Lightning-fast YMM search tool for your website to boost conversions and reduce returns caused by fitment mismatches.
             </Typography>
             <Divider sx={{ my: 1.5 }} />
             <Typography variant="subtitle2" fontWeight={600} gutterBottom>
