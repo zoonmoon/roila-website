@@ -108,7 +108,7 @@ export default function Home() {
                 rel="noopener"
                 sx={{ color: '#1565C0', fontWeight: 500, '&:hover': { textDecoration: 'underline' } }}
               >
-                intlautoparts.com
+                intlautoparts.com (website)
               </Link>
               <Typography variant="body2" color="text.secondary">
                 ↕ Integration with
@@ -119,7 +119,7 @@ export default function Home() {
                 rel="noopener"
                 sx={{ color: '#1565C0', fontWeight: 500, '&:hover': { textDecoration: 'underline' } }}
               >
-                ebay.com/str/intlautoparts
+                ebay.com/str/intlautoparts (eBay Store)
               </Link>
             </Stack>
           </CardContent>
