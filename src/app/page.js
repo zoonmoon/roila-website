@@ -96,6 +96,7 @@ export default function Home() {
             </Typography>
             <Typography variant="body2" color="text.secondary" mb={2}>
               Automatically sync your eBay listings, inventory, and pricing in real-time with your website.
+              Zero manual work for managing products in website if you already own an eBay store.
             </Typography>
             <Divider sx={{ my: 1.5 }} />
             <Typography variant="subtitle2" fontWeight={600} gutterBottom>
