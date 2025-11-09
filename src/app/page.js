@@ -146,11 +146,21 @@ export default function Home() {
             <Typography variant="subtitle2" fontWeight={600} gutterBottom>
               Example Portfolio:
             </Typography>
+
+
+                     <Link
+              href="https://www.spastore.com/search.php"
+              target="_blank"
+              rel="noopener"
+              sx={{ color: '#1565C0', fontWeight: 500, '&:hover': { textDecoration: 'underline' } }}
+            >
+              Spa Store
+            </Link>
             <Link
               href="https://store.ssrperformance.com"
               target="_blank"
               rel="noopener"
-              sx={{ color: '#1565C0', fontWeight: 500, '&:hover': { textDecoration: 'underline' } }}
+              sx={{my:1.3, display:'block', color: '#1565C0', fontWeight: 500, '&:hover': { textDecoration: 'underline' } }}
             >
               SSR Performance
             </Link>
