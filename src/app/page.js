@@ -7,19 +7,14 @@ import {
   Stack,
   Link,
   Divider,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
   Button,
   Modal,
+  Card,
+  CardContent,
 } from '@mui/material'
 import FacebookIcon from '@mui/icons-material/Facebook'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import MarkunreadIcon from '@mui/icons-material/Markunread'
-import BuildCircleIcon from '@mui/icons-material/BuildCircle'
-import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions'
-import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest'
 
 export default function Home() {
   const [open, setOpen] = useState(false)
@@ -27,101 +22,170 @@ export default function Home() {
   const handleClose = () => setOpen(false)
 
   return (
-    <Container maxWidth="sm" sx={{ py: 10, textAlign: 'center', position: 'relative' }}>
-      {/* --- Contact Us Button (Top Right) --- */}
-
-      {/* --- Logo and Tagline --- */}
-      <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" gap={3}>
+    <Container maxWidth="lg" sx={{ py: 10 }}>
+      {/* --- Logo and Title --- */}
+      <Box textAlign="center" mb={6}>
         <img
           src="/logo/logo-hr-removebg-preview.png"
           alt="Roila Logo"
           width={160}
-          height={'auto'}
+          height="auto"
           style={{ marginBottom: '10px' }}
         />
-        <Typography variant="h5" fontWeight={500} color="text.primary" sx={{ mb: 4 }}>
+        <Typography variant="h5" fontWeight={600}>
           Auto Parts Website Development & Integration Services
         </Typography>
-
-        {/* --- Services List --- */}
-        <List
-          sx={{
-            width: '100%',
-            maxWidth: 500,
-            mx: 'auto',
-            bgcolor: '#fff',
-            borderRadius: 3,
-            boxShadow: '0px 4px 20px rgba(0,0,0,0.08)',
-            overflow: 'hidden',
-          }}
-        >
-          <ListItem
-            sx={{
-              transition: 'all 0.3s ease',
-              '&:hover': { backgroundColor: '#f9fafb', transform: 'scale(1.01)' },
-            }}
-          >
-            <ListItemIcon>
-              <SettingsSuggestIcon sx={{ color: '#2E7D32' }} />
-            </ListItemIcon>
-            <ListItemText
-              primary="Year Make Model Search Integration"
-              secondary="Custom-fitment systems for precise auto part compatibility."
-            />
-          </ListItem>
-
-          <Divider variant="middle" />
-
-          <ListItem
-            sx={{
-              transition: 'all 0.3s ease',
-              '&:hover': { backgroundColor: '#f9fafb', transform: 'scale(1.01)' },
-            }}
-          >
-            <ListItemIcon>
-              <IntegrationInstructionsIcon sx={{ color: '#1565C0' }} />
-            </ListItemIcon>
-            <ListItemText
-              primary="eBay Auto Parts Store Integration"
-              secondary="Sync your eBay listings, inventory, and pricing with your website."
-            />
-          </ListItem>
-
-          <Divider variant="middle" />
-
-          <ListItem
-            sx={{
-              transition: 'all 0.3s ease',
-              '&:hover': { backgroundColor: '#f9fafb', transform: 'scale(1.01)' },
-            }}
-          >
-            <ListItemIcon>
-              <BuildCircleIcon sx={{ color: '#8E24AA' }} />
-            </ListItemIcon>
-            <ListItemText
-              primary="Auto Parts Website Development"
-              secondary="SEO-friendly, high-performance websites tailored for auto parts businesses."
-            />
-          </ListItem>
-        </List>
       </Box>
 
-      {/* --- Fixed Social Icons (Bottom) --- */}
-      <Box sx={{  zIndex: 444, bottom: 20, marginTop:'40px',  }}>
+      {/* --- Cards Row --- */}
+      <Box
+        display="flex"
+        flexWrap="wrap"
+        justifyContent="center"
+        gap={3}
+        sx={{
+          '& > *': {
+            flex: '1 1 320px', // each card ~320px wide, wraps when smaller
+            maxWidth: 360,
+          },
+        }}
+      >
+        {/* Card 1 */}
+        <Card
+          sx={{
+            borderRadius: 3,
+            boxShadow: '0px 4px 12px rgba(0,0,0,0.1)',
+            transition: 'transform 0.2s ease',
+            '&:hover': { transform: 'translateY(-5px)' },
+          }}
+        >
+          <CardContent>
+            <Typography variant="h6" fontWeight={600} gutterBottom>
+              Year Make Model Search Integration
+            </Typography>
+            <Typography variant="body2" color="text.secondary" mb={2}>
+              Lightning-fast YMM search to boost conversions and reduce returns caused by fitment mismatches.
+            </Typography>
+            <Divider sx={{ my: 1.5 }} />
+            <Typography variant="subtitle2" fontWeight={600} gutterBottom>
+              Example Portfolio:
+            </Typography>
+            <Link
+              href="https://store.ssrperformance.com"
+              target="_blank"
+              rel="noopener"
+              sx={{ color: '#1565C0', fontWeight: 500, '&:hover': { textDecoration: 'underline' } }}
+            >
+              SSR Performance
+            </Link>
+          </CardContent>
+        </Card>
+
+        {/* Card 2 */}
+        <Card
+          sx={{
+            borderRadius: 3,
+            boxShadow: '0px 4px 12px rgba(0,0,0,0.1)',
+            transition: 'transform 0.2s ease',
+            '&:hover': { transform: 'translateY(-5px)' },
+          }}
+        >
+          <CardContent>
+            <Typography variant="h6" fontWeight={600} gutterBottom>
+              eBay Auto Parts Store Integration
+            </Typography>
+            <Typography variant="body2" color="text.secondary" mb={2}>
+              Automatically sync your eBay listings, inventory, and pricing in real-time with your website.
+            </Typography>
+            <Divider sx={{ my: 1.5 }} />
+            <Typography variant="subtitle2" fontWeight={600} gutterBottom>
+              Example Portfolio:
+            </Typography>
+            <Stack spacing={0.5}>
+              <Link
+                href="https://intlautoparts.com"
+                target="_blank"
+                rel="noopener"
+                sx={{ color: '#1565C0', fontWeight: 500, '&:hover': { textDecoration: 'underline' } }}
+              >
+                intlautoparts.com
+              </Link>
+              <Typography variant="body2" color="text.secondary">
+                ↕ Integration with
+              </Typography>
+              <Link
+                href="https://www.ebay.com/str/intlautoparts"
+                target="_blank"
+                rel="noopener"
+                sx={{ color: '#1565C0', fontWeight: 500, '&:hover': { textDecoration: 'underline' } }}
+              >
+                ebay.com/str/intlautoparts
+              </Link>
+            </Stack>
+          </CardContent>
+        </Card>
+
+        {/* Card 3 */}
+        <Card
+          sx={{
+            borderRadius: 3,
+            boxShadow: '0px 4px 12px rgba(0,0,0,0.1)',
+            transition: 'transform 0.2s ease',
+            '&:hover': { transform: 'translateY(-5px)' },
+          }}
+        >
+          <CardContent>
+            <Typography variant="h6" fontWeight={600} gutterBottom>
+              Auto Parts Website Development
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              SEO-friendly, high-performance websites designed specifically for auto parts businesses.
+            </Typography>
+            <Divider sx={{ my: 1.5 }} />
+            <Typography variant="subtitle2" fontWeight={600} gutterBottom>
+              Example Portfolio:
+            </Typography>
+            <Link
+              href="https://store.ssrperformance.com"
+              target="_blank"
+              rel="noopener"
+              sx={{ color: '#1565C0', fontWeight: 500, '&:hover': { textDecoration: 'underline' } }}
+            >
+              SSR Performance
+            </Link>
+            <Link
+              href="https://intlautoparts.com"
+              target="_blank"
+              rel="noopener"
+              sx={{my:1.3, display:'block', color: '#1565C0', fontWeight: 500, '&:hover': { textDecoration: 'underline' } }}
+            >
+              INTL AUTO PARTS
+            </Link>
+
+          </CardContent>
+        </Card>
+      </Box>
+
+      {/* --- Contact Button --- */}
+      <Box textAlign="center" mt={5}>
         <Button
           variant="contained"
           color="primary"
           onClick={handleOpen}
-          sx={{ borderRadius: 5, padding:'10px 50px', textTransform: 'none', fontWeight: 'bold' }}
+          sx={{
+            borderRadius: 5,
+            px: 6,
+            py: 1.5,
+            fontWeight: 'bold',
+            textTransform: 'none',
+          }}
         >
           Contact Us
         </Button>
       </Box>
 
-
-
-      {/* --- Contact Us Modal --- */}
-      <Modal open={open} onClose={handleClose} aria-labelledby="contact-modal-title">
+      {/* --- Modal --- */}
+      <Modal open={open} onClose={handleClose}>
         <Box
           sx={{
             position: 'absolute',
@@ -136,28 +200,23 @@ export default function Home() {
             textAlign: 'center',
           }}
         >
-          <Typography id="contact-modal-title" variant="h6" sx={{ mb: 2 }}>
+          <Typography variant="h6" sx={{ mb: 2 }}>
             Contact Us
           </Typography>
-          
-          <Divider variant="middle" sx={{my:3}} />
-
+          <Divider sx={{ my: 3 }} />
           <Stack direction="row" spacing={4} justifyContent="center">
-            <Link href="https://www.facebook.com/profile.php?id=61582460623161" target="_blank" rel="noopener">
-              <FacebookIcon sx={{ fontSize: 40, color: '#1877F2', transition: '0.3s', '&:hover': { opacity: 0.8 } }} />
+            <Link href="https://www.facebook.com/profile.php?id=61582460623161" target="_blank">
+              <FacebookIcon sx={{ fontSize: 40, color: '#1877F2' }} />
             </Link>
-            <Link href="https://www.linkedin.com/company/109541409/" target="_blank" rel="noopener">
-              <LinkedInIcon sx={{ fontSize: 40, color: '#0077B5', transition: '0.3s', '&:hover': { opacity: 0.8 } }} />
+            <Link href="https://www.linkedin.com/company/109541409/" target="_blank">
+              <LinkedInIcon sx={{ fontSize: 40, color: '#0077B5' }} />
             </Link>
             <Link href="mailto:sales@roila.net">
-              <MarkunreadIcon sx={{ fontSize: 40, color: '#34A853', transition: '0.3s', '&:hover': { opacity: 0.8 } }} />
+              <MarkunreadIcon sx={{ fontSize: 40, color: '#34A853' }} />
             </Link>
           </Stack>
         </Box>
       </Modal>
-
-      {/* Add bottom margin so content isn’t blocked by fixed icons */}
-      <Box sx={{ height: 40 }} />
     </Container>
   )
 }
