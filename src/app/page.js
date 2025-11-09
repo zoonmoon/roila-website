@@ -95,8 +95,8 @@ export default function Home() {
               eBay Auto Parts Store Integration
             </Typography>
             <Typography variant="body2" color="text.secondary" mb={2}>
-              Automatically sync your eBay listings, inventory, and pricing in real-time with your website.
               Zero manual work for managing products in website if you already own an eBay store.
+              Automatically sync your eBay listings, inventory, and pricing in real-time with your website.
             </Typography>
             <Divider sx={{ my: 1.5 }} />
             <Typography variant="subtitle2" fontWeight={600} gutterBottom>
