@@ -151,14 +151,6 @@ export default function Home() {
             </Typography>
 
 
-                     <Link
-              href="https://www.spastore.com/search.php"
-              target="_blank"
-              rel="noopener"
-              sx={{ color: '#1565C0', fontWeight: 500, '&:hover': { textDecoration: 'underline' } }}
-            >
-              Spa Store
-            </Link>
             <Link
               href="https://store.ssrperformance.com"
               target="_blank"
@@ -174,6 +166,16 @@ export default function Home() {
               sx={{my:1.3, display:'block', color: '#1565C0', fontWeight: 500, '&:hover': { textDecoration: 'underline' } }}
             >
               INTL AUTO PARTS
+            </Link>
+
+
+                     <Link
+              href="https://www.spastore.com/search.php"
+              target="_blank"
+              rel="noopener"
+              sx={{ color: '#1565C0', fontWeight: 500, '&:hover': { textDecoration: 'underline' } }}
+            >
+              Spa Store
             </Link>
 
           </CardContent>
