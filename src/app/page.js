@@ -103,17 +103,8 @@ export default function Home() {
               Example Portfolio:
             </Typography>
             <Stack spacing={0.5}>
-              <Link
-                href="https://intlautoparts.com"
-                target="_blank"
-                rel="noopener"
-                sx={{ color: '#1565C0', fontWeight: 500, '&:hover': { textDecoration: 'underline' } }}
-              >
-                intlautoparts.com (website)
-              </Link>
-              <Typography variant="body2" color="text.secondary">
-                ↕ Integration with
-              </Typography>
+
+           
               <Link
                 href="https://www.ebay.com/str/intlautoparts"
                 target="_blank"
@@ -122,6 +113,18 @@ export default function Home() {
               >
                 ebay.com/str/intlautoparts (eBay Store)
               </Link>
+   <Typography variant="body2" color="text.secondary">
+                ↕ Integration with
+              </Typography>
+              <Link
+                href="https://intlautoparts.com"
+                target="_blank"
+                rel="noopener"
+                sx={{ color: '#1565C0', fontWeight: 500, '&:hover': { textDecoration: 'underline' } }}
+              >
+                intlautoparts.com (website)
+              </Link>
+
             </Stack>
           </CardContent>
         </Card>
